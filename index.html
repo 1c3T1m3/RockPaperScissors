@@ -6,71 +6,19 @@
     <title>Petra|Psalidi|Xarti</title>
 </head>
 <body>
-    <script>
-        //pare input apo xrhsth
-        // randon npc epilogh anemesa rock, paper, scissors
-        // check an h epilogh xrhsth == epilogh npc kai emfanise analogo munhma
+    <script src="js-file.js" defer>
 
-        const randomNo = 1;
-        let humanScore = 0;
-        let computerScore = 0;
-        let count = 1;
-
-        function getComputerChoice(){
-            let randomNo = Math.floor(Math.random() * 3)+1;
-            if (randomNo == 1){
-                return "rock";
-            }
-            else if(randomNo == 2){
-                return "paper";
-            }
-            else if(randomNo == 3){
-                return "scissors";
-            }
-        }
-        function getHumanChoice(){            
-            let playerschoice = prompt("gibs sth");
-            return playerschoice.toLowerCase();
-        }
-        function playRound(humanChoice, computerChoice){
-            if (humanChoice == computerChoice){
-                return humanChoice+" vs "+computerChoice+": Draw.";
-            }
-            else if(humanChoice == "rock"){
-                if (computerChoice == "scissors"){
-                    humanScore += 1;
-                    return humanChoice+" vs "+computerChoice+": You win!";
-                }
-                else{
-                    computerScore += 1;
-                    return humanChoice+" vs "+computerChoice+": You lose...";
-                }
-            }
-            else if(humanChoice == "paper"){
-                if (computerChoice == "rock"){
-                    humanScore += 1;
-                    return humanChoice+" vs "+computerChoice+": You win!";
-                }
-                else{
-                    computerScore += 1;
-                    return humanChoice+" vs "+computerChoice+": You lose...";
-                }
-            }
-            else if(humanChoice == "scissors"){
-                if (computerChoice == "paper"){
-                    humanScore += 1;
-                    return humanChoice+" vs "+computerChoice+": You win!";
-                }
-                else{
-                    computerScore += 1;
-                    return humanChoice+" vs "+computerChoice+": You lose...";
-                }
-            }
-        }
-        while (count <= 5){
+/*        while (count <= 5){
             console.log("Round ", count, ": ", playRound(getHumanChoice(),getComputerChoice()), humanScore, computerScore);
             count ++;
         }
+        console.log("Round ", count, ": ", playRound(getHumanChoice(),getComputerChoice()), humanScore, computerScore);
+*/           
     </script>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+    <div id="Round">Result: </div>
+    <div id="Score">score: </div>
 </body>
 </html>
